@@ -13,12 +13,13 @@ namespace Calculator
         {
             InitializeComponent();
         }
-
+        
+        // Function to check for exceptions
         void CheckException(double txt1, double txt2, double txt3)
         {
             if (txt1 < 0 || txt1 == null)
             {
-                throw new MyException("Bill Value should be Greater than 1");
+                throw new MyException("Bill Value should be Greater than 1");   // Throw exception with passing arguments
             }
             if (txt2 < 0)
             {
@@ -61,6 +62,7 @@ namespace Calculator
     }
 }
 
+//User Defined Exception
 public class MyException : Exception
 {
     public MyException(string message) : base(message)
