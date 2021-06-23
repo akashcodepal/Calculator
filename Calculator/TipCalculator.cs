@@ -49,11 +49,11 @@ namespace Calculator
                 textBox4.Text = $"$ {Tip_per_person.ToString("###,###.00")}";
                 textBox5.Text = $"$ {total_per_person.ToString("###,###.00")}";
             }
-            catch (MyException MExcp)
+            catch (MyException MExcp)   // Checkinh my Own Exceptions 
             {
                 MessageBox.Show(MExcp.Message); 
             }
-            catch(Exception E)
+            catch(Exception E) // Checking system defined Exceptions
             {
                 MessageBox.Show("Enter all Fields\n"+E.Message+"\nCheck All Inputs Again");
             }
